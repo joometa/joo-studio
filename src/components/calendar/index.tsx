@@ -1,20 +1,47 @@
 import styled from "@emotion/styled";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { format, addMonths, subMonths } from "date-fns";
 import { Header } from "./Header";
 import { Days } from "./Days";
 import { Cells } from "./Cells";
 
 export function Calendar() {
-  const [currentMonth, setCurrentMonth] = useState(new Date());
-  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [currentMonth, setCurrentMonth] = useState<Date>(new Date());
+  const [selectedDate, setSelectedDate] = useState<Date>(new Date());
+  const [currentYear, setCurrentYear] = useState<string>(
+    format(new Date(), "yyyy")
+  );
+  const [holidays, setHolidays] = useState<any>({});
 
   const handleClickPrevMonth = () => {
-    setCurrentMonth(subMonths(currentMonth, 1));
+    const change = subMonths(currentMonth, 1);
+    if (currentYear !== format(change, "yyyy")) {
+      setCurrentYear(format(change, "yyyy"));
+    }
+    setCurrentMonth(change);
   };
   const handleClickNextMonth = () => {
+    const change = addMonths(currentMonth, 1);
+    if (currentYear !== format(change, "yyyy")) {
+      setCurrentYear(format(change, "yyyy"));
+    }
     setCurrentMonth(addMonths(currentMonth, 1));
   };
+
+  useEffect(() => {
+    fetch("/joo-studio/holiday")
+      .then((res) => res.json())
+      .then((data) => {
+        let tempHolidays: any = {};
+        data.items &&
+          data.items.forEach((item: any) => {
+            const key = item.start.date as string;
+            tempHolidays[key] = [item.summary, item.description === "공휴일"];
+          });
+        console.log(tempHolidays);
+        setHolidays(tempHolidays);
+      });
+  }, []);
 
   return (
     <Container>
@@ -28,6 +55,7 @@ export function Calendar() {
         currentMonth={currentMonth}
         selectedDate={selectedDate}
         onDateClick={() => {}}
+        holidays={holidays}
       />
     </Container>
   );

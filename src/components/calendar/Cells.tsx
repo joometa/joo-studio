@@ -18,9 +18,15 @@ interface Props {
   currentMonth: Date;
   selectedDate: Date;
   onDateClick: () => void;
+  holidays: any;
 }
 
-export const Cells = ({ currentMonth, selectedDate, onDateClick }: Props) => {
+export const Cells = ({
+  currentMonth,
+  selectedDate,
+  onDateClick,
+  holidays,
+}: Props) => {
   const monthStart = startOfMonth(currentMonth);
   const monthEnd = endOfMonth(monthStart);
   const startDate = startOfWeek(monthStart);
@@ -54,6 +60,9 @@ export const Cells = ({ currentMonth, selectedDate, onDateClick }: Props) => {
         startMonth,
         startDay,
       });
+      const fullDate = `${startYear}-${startMonth
+        .toString()
+        .padStart(2, "0")}-${startDay.toString().padStart(2, "0")}`;
 
       days.push(
         <div
@@ -72,16 +81,24 @@ export const Cells = ({ currentMonth, selectedDate, onDateClick }: Props) => {
         >
           <div className="date-group">
             <span
-              className={
+              className={`
+              ${
+                holidays[fullDate] != null && holidays[fullDate][1] == true
+                  ? "text-holy"
+                  : ""
+              } ${
                 format(currentMonth, "M") !== format(day, "M")
                   ? "text not-valid"
                   : ""
-              }
+              }`}
             >
               {formattedDate}
             </span>
             <span className="lunar">{LUNAR_DAY}</span>
           </div>
+          <p className="holiday">
+            {holidays[fullDate] != null ? holidays[fullDate][0] : ""}
+          </p>
         </div>
       );
       day = addDays(day, 1);
@@ -115,6 +132,7 @@ const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     border-bottom: 0.4px solid gray;
+
     :last-child {
       border-bottom: 2px solid black;
     }
@@ -125,17 +143,20 @@ const Container = styled.div`
       display: flex;
       font-weight: 500;
       border-right: 0.4px solid gray;
+      :first-child {
+        color: red;
+      }
       :last-child {
         border-right: none;
       }
-      flex-direction: row;
+      flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
       font-size: 0.8em;
       .date-group {
         display: flex;
         width: 100%;
-        margin: 6px 6px 0 6px;
+        padding: 6px 6px 0 6px;
         justify-content: space-between;
         align-items: flex-end;
 
@@ -145,13 +166,23 @@ const Container = styled.div`
         }
 
         .lunar {
+          margin: 0;
           color: gray;
           font-size: 0.7em;
         }
       }
+      .holiday {
+        padding: 2px 6px 0 6px;
+        color: red;
+        font-size: 0.8em;
+      }
+
       .not-valid {
         color: gray;
         font-size: 0.75em;
+      }
+      .text-holy {
+        color: red;
       }
     }
     .col.cell.valid {
@@ -159,7 +190,6 @@ const Container = styled.div`
         cursor: pointer;
         transition: 0.2s ease-in-out;
         font-size: 1em;
-        color: #aa5b42;
       }
     }
     .col.cell.selected {

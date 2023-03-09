@@ -53,12 +53,7 @@ export function Header() {
           </div>
         </div>
       </Container>
-      <SideDrawer
-        isOpen={isOpen}
-        onOpen={onOpen}
-        onClose={onClose}
-        ref={btnRef}
-      />
+      <SideDrawer isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
     </>
   );
 }

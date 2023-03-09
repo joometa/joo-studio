@@ -15,10 +15,9 @@ interface Props {
   isOpen: boolean;
   onOpen: () => void;
   onClose: () => void;
-  ref: React.MutableRefObject<any>;
 }
 
-export function SideDrawer({ isOpen, onOpen, onClose, ref }: Props) {
+export function SideDrawer({ isOpen, onOpen, onClose }: Props) {
   const router = useRouter();
   return (
     <>
@@ -26,7 +25,7 @@ export function SideDrawer({ isOpen, onOpen, onClose, ref }: Props) {
         isOpen={isOpen}
         placement="left"
         onClose={onClose}
-        finalFocusRef={ref}
+        // finalFocusRef={ref}
       >
         <DrawerOverlay />
         <DrawerContent>
