@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/joo-studio",
+  basePath: "/",
   reactStrictMode: true,
   compiler: {
     emotion: true,
