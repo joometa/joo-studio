@@ -8,7 +8,7 @@
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && next export && touch out/.nojekyll && npm run deploy"
+    "deploy": "next build && next export && touch out/.nojekyll"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.17",
