@@ -1,5 +1,5 @@
 {
-  "homepage": "https://joometa.github.io/joo-studio",
+  "homepage": "https://joometa.github.io/joo-studio/",
   "name": "joo-studio",
   "version": "1.0.0",
   "private": true,
@@ -9,7 +9,6 @@
     "start": "next start",
     "lint": "next lint",
     "deploy": "next build && next export && touch out/.nojekyll && git add -f out/ && git commit -m 'deploy to gh-pages' && git subtree push --prefix out origin gh-pages"
-    // "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.17",
