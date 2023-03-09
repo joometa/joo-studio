@@ -6,9 +6,10 @@ import {
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
-  useDisclosure,
   Button,
 } from "@chakra-ui/react";
+import styled from "@emotion/styled";
+import { useRouter } from "next/router";
 
 interface Props {
   isOpen: boolean;
@@ -18,6 +19,7 @@ interface Props {
 }
 
 export function SideDrawer({ isOpen, onOpen, onClose, ref }: Props) {
+  const router = useRouter();
   return (
     <>
       <Drawer
@@ -29,18 +31,37 @@ export function SideDrawer({ isOpen, onOpen, onClose, ref }: Props) {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Home</DrawerHeader>
+          <DrawerHeader>
+            <Button variant="link" size="lg" onClick={() => router.push("/")}>
+              Home
+            </Button>
+          </DrawerHeader>
 
           <DrawerBody>
-            <Button colorScheme="teal" variant="link">
-              달력
-            </Button>
-            <Button colorScheme="teal" variant="link">
-              날짜 계산기
-            </Button>
+            <ButtonGroup>
+              <button onClick={() => router.push("/calendar")}>달력</button>
+              <button>날짜 계산기</button>
+            </ButtonGroup>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
     </>
   );
 }
+
+const ButtonGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  button {
+    font-weight: 600;
+    transition: 0.2s ease;
+    margin-bottom: 15px;
+    &:hover {
+      font-weight: 600;
+      color: #2979ff;
+      transform: scale(1.05);
+    }
+  }
+`;

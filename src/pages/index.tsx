@@ -48,11 +48,22 @@ export default function Home() {
 
 const Container = styled.div`
   width: 100%;
+  max-width: 1440px;
   height: 100%;
+  margin: auto;
 
   .title {
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
+  }
+
+  @media (max-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    .button-group {
+      max-width: 90vw;
+      width: 100%;
+    }
   }
 `;

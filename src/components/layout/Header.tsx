@@ -18,7 +18,7 @@ export function Header() {
   const [scrollHeight, setScrollHeight] = useState<number>(0);
   const btnRef = React.useRef<any>(null);
 
-  const [lang, setLang] = useState("ko");
+  const [lang, setLang] = useState<"ko" | "en">("ko");
   const LANG = {
     ko: "한국어",
     en: "English",
@@ -35,12 +35,7 @@ export function Header() {
 
   return (
     <>
-      <Container
-      // style={{
-      //   borderBottom:
-      //     scrollHeight !== 0 ? "1px solid #e6e5e5" : "1px solid #ffffff",
-      // }}
-      >
+      <Container>
         <div className="button-group">
           <div className="test">
             <Button ref={btnRef} onClick={onOpen} size="md" variant="outline">
@@ -68,7 +63,7 @@ export function Header() {
   );
 }
 
-const Container = styled.div<{ isScrolled: boolean }>`
+const Container = styled.div`
   position: fixed;
   left: 0;
   top: 0;
