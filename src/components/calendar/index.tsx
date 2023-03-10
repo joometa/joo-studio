@@ -29,17 +29,15 @@ export function Calendar() {
   };
 
   useEffect(() => {
-    console.log("test2\n\n", process.env.NEXT_PUBLIC_GOOGLE_API_KEY);
-    fetch("/holiday")
+    fetch("/api/holidays")
       .then((res) => res.json())
       .then((data) => {
         let tempHolidays: any = {};
-        data.items &&
+        data?.items &&
           data.items.forEach((item: any) => {
             const key = item.start.date as string;
             tempHolidays[key] = [item.summary, item.description === "공휴일"];
           });
-        console.log(tempHolidays);
         setHolidays(tempHolidays);
       });
   }, []);
