@@ -31,7 +31,10 @@ Use the calendar to check national public holidays and the lunar calendar."
           content="국가별 공휴일과 음력을 확인할 수 있는 달력을 이용해 보세요.
 Use the calendar to check national public holidays and the lunar calendar."
         />
-        <meta property="og:image" content="./images/ogImage.png" />
+        <meta
+          property="og:image"
+          content="https://i.ibb.co/Mnx7ZvB/ogImage.png"
+        />
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -45,7 +48,10 @@ Use the calendar to check national public holidays and the lunar calendar."
           content="국가별 공휴일과 음력을 확인할 수 있는 달력을 이용해 보세요.
 Use the calendar to check national public holidays and the lunar calendar."
         />
-        <meta property="twitter:image" content="./images/ogImage.png" />
+        <meta
+          property="twitter:image"
+          content="https://i.ibb.co/Mnx7ZvB/ogImage.png"
+        />
       </Head>
       <Container>
         <RCalendar />

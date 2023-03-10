@@ -33,7 +33,10 @@ export default function Home() {
           property="og:description"
           content="달력(Calendar), 음력달력, 날짜 계산기 등의 서비스를 제공합니다."
         />
-        <meta property="og:image" content="./images/ogImage.png" />
+        <meta
+          property="og:image"
+          content="https://i.ibb.co/Mnx7ZvB/ogImage.png"
+        />
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -43,7 +46,10 @@ export default function Home() {
           property="twitter:description"
           content="달력(Calendar), 음력달력, 날짜 계산기 등의 서비스를 제공합니다."
         />
-        <meta property="twitter:image" content="./images/ogImage.png" />
+        <meta
+          property="twitter:image"
+          content="https://i.ibb.co/Mnx7ZvB/ogImage.png"
+        />
       </Head>
       <main>
         <Container>
