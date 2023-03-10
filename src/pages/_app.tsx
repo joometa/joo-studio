@@ -4,6 +4,7 @@ import type { AppProps } from "next/app";
 import { ChakraBaseProvider, extendBaseTheme } from "@chakra-ui/react";
 import chakraTheme from "@chakra-ui/theme";
 import styled from "@emotion/styled";
+import Script from "next/script";
 
 const theme = extendBaseTheme({
   components: chakraTheme.components,
@@ -11,12 +12,33 @@ const theme = extendBaseTheme({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ChakraBaseProvider theme={theme}>
-      <Header />
-      <MainContainer>
-        <Component {...pageProps} />
-      </MainContainer>
-    </ChakraBaseProvider>
+    <>
+      {/* Google Analytics */}
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`}
+      />
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', ${process.env.GA_TRACKING_ID});
+          `,
+        }}
+      />
+
+      <ChakraBaseProvider theme={theme}>
+        <Header />
+        <MainContainer>
+          <Component {...pageProps} />
+        </MainContainer>
+      </ChakraBaseProvider>
+    </>
   );
 }
 
