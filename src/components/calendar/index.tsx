@@ -29,6 +29,7 @@ export function Calendar() {
   };
 
   useEffect(() => {
+    console.log("test\n\n", process.env.NEXT_PUBLIC_GOOGLE_API_KEY);
     fetch("/holiday")
       .then((res) => res.json())
       .then((data) => {
