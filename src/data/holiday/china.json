@@ -1,0 +1,730 @@
+[
+  {
+    "summary": "New Year's Day",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-01-01"
+    }
+  },
+  {
+    "summary": "New Year's Holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-01-02"
+    }
+  },
+  {
+    "summary": "New Year's Holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-01-03"
+    }
+  },
+  {
+    "summary": "Spring Festival Eve",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-01-31"
+    }
+  },
+  {
+    "summary": "Lunar New Year",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-02-01"
+    }
+  },
+  {
+    "summary": "Spring Festival Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-02-02"
+    }
+  },
+  {
+    "summary": "Spring Festival Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-02-03"
+    }
+  },
+  {
+    "summary": "Spring Festival Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-02-04"
+    }
+  },
+  {
+    "summary": "Spring Festival Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-02-05"
+    }
+  },
+  {
+    "summary": "Spring Festival Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-02-06"
+    }
+  },
+  {
+    "summary": "Lantern Festival",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2022-02-15"
+    }
+  },
+  {
+    "summary": "Zhonghe Festival",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2022-03-04"
+    }
+  },
+  {
+    "summary": "International Women's Day",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-03-08"
+    }
+  },
+  {
+    "summary": "Arbor Day",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2022-03-12"
+    }
+  },
+  {
+    "summary": "Qing Ming Jie holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-04-03"
+    }
+  },
+  {
+    "summary": "Qing Ming Jie holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-04-04"
+    }
+  },
+  {
+    "summary": "Qing Ming Jie",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-04-05"
+    }
+  },
+  {
+    "summary": "Labour Day Holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-04-30"
+    }
+  },
+  {
+    "summary": "Labour Day",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-05-01"
+    }
+  },
+  {
+    "summary": "Labour Day Holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-05-02"
+    }
+  },
+  {
+    "summary": "Labour Day Holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-05-03"
+    }
+  },
+  {
+    "summary": "Youth Day",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-05-04"
+    }
+  },
+  {
+    "summary": "Labour Day Holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-05-04"
+    }
+  },
+  {
+    "summary": "Dragon Boat Festival",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-06-03"
+    }
+  },
+  {
+    "summary": "Dragon Boat Festival holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-06-04"
+    }
+  },
+  {
+    "summary": "Dragon Boat Festival holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-06-05"
+    }
+  },
+  {
+    "summary": "Chinese Valentine's Day",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2022-08-04"
+    }
+  },
+  {
+    "summary": "Spirit Festival",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2022-08-12"
+    }
+  },
+  {
+    "summary": "Teachers' Day",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2022-09-10"
+    }
+  },
+  {
+    "summary": "Mid-Autumn Festival",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-09-10"
+    }
+  },
+  {
+    "summary": "Mid-Autumn Festival holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-09-11"
+    }
+  },
+  {
+    "summary": "Mid-Autumn Festival holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-09-12"
+    }
+  },
+  {
+    "summary": "National Day",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-10-01"
+    }
+  },
+  {
+    "summary": "National Day Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-10-02"
+    }
+  },
+  {
+    "summary": "National Day Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-10-03"
+    }
+  },
+  {
+    "summary": "Double Ninth Festival",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2022-10-04"
+    }
+  },
+  {
+    "summary": "National Day Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-10-04"
+    }
+  },
+  {
+    "summary": "National Day Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-10-05"
+    }
+  },
+  {
+    "summary": "National Day Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-10-06"
+    }
+  },
+  {
+    "summary": "National Day Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2022-10-07"
+    }
+  },
+  {
+    "summary": "Christmas Day",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2022-12-25"
+    }
+  },
+  {
+    "summary": "New Year's Day",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-01-01"
+    }
+  },
+  {
+    "summary": "New Year's Holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-01-02"
+    }
+  },
+  {
+    "summary": "Spring Festival Eve",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-01-21"
+    }
+  },
+  {
+    "summary": "Lunar New Year",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-01-22"
+    }
+  },
+  {
+    "summary": "Spring Festival Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-01-23"
+    }
+  },
+  {
+    "summary": "Spring Festival Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-01-24"
+    }
+  },
+  {
+    "summary": "Spring Festival Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-01-25"
+    }
+  },
+  {
+    "summary": "Spring Festival Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-01-26"
+    }
+  },
+  {
+    "summary": "Spring Festival Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-01-27"
+    }
+  },
+  {
+    "summary": "Lantern Festival",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2023-02-05"
+    }
+  },
+  {
+    "summary": "Zhonghe Festival",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2023-02-21"
+    }
+  },
+  {
+    "summary": "International Women's Day",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-03-08"
+    }
+  },
+  {
+    "summary": "Arbor Day",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2023-03-12"
+    }
+  },
+  {
+    "summary": "Qing Ming Jie",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-04-05"
+    }
+  },
+  {
+    "summary": "Labour Day Holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-04-29"
+    }
+  },
+  {
+    "summary": "Labour Day Holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-04-30"
+    }
+  },
+  {
+    "summary": "Labour Day",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-05-01"
+    }
+  },
+  {
+    "summary": "Labour Day Holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-05-02"
+    }
+  },
+  {
+    "summary": "Labour Day Holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-05-03"
+    }
+  },
+  {
+    "summary": "Youth Day",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-05-04"
+    }
+  },
+  {
+    "summary": "Dragon Boat Festival",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-06-22"
+    }
+  },
+  {
+    "summary": "Dragon Boat Festival holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-06-23"
+    }
+  },
+  {
+    "summary": "Dragon Boat Festival holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-06-24"
+    }
+  },
+  {
+    "summary": "Chinese Valentine's Day",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2023-08-22"
+    }
+  },
+  {
+    "summary": "Spirit Festival",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2023-08-30"
+    }
+  },
+  {
+    "summary": "Teachers' Day",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2023-09-10"
+    }
+  },
+  {
+    "summary": "Mid-Autumn Festival",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-09-29"
+    }
+  },
+  {
+    "summary": "National Day",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-10-01"
+    }
+  },
+  {
+    "summary": "National Day Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-10-02"
+    }
+  },
+  {
+    "summary": "National Day Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-10-03"
+    }
+  },
+  {
+    "summary": "National Day Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-10-04"
+    }
+  },
+  {
+    "summary": "National Day Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-10-05"
+    }
+  },
+  {
+    "summary": "National Day Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2023-10-06"
+    }
+  },
+  {
+    "summary": "Double Ninth Festival",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2023-10-23"
+    }
+  },
+  {
+    "summary": "Christmas Day",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2023-12-25"
+    }
+  },
+  {
+    "summary": "New Year's Day",
+    "description": "Public holiday",
+    "start": {
+      "date": "2024-01-01"
+    }
+  },
+  {
+    "summary": "Spring Festival Eve",
+    "description": "Public holiday",
+    "start": {
+      "date": "2024-02-09"
+    }
+  },
+  {
+    "summary": "Lunar New Year",
+    "description": "Public holiday",
+    "start": {
+      "date": "2024-02-10"
+    }
+  },
+  {
+    "summary": "Spring Festival Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2024-02-11"
+    }
+  },
+  {
+    "summary": "Spring Festival Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2024-02-12"
+    }
+  },
+  {
+    "summary": "Spring Festival Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2024-02-13"
+    }
+  },
+  {
+    "summary": "Spring Festival Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2024-02-14"
+    }
+  },
+  {
+    "summary": "Spring Festival Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2024-02-15"
+    }
+  },
+  {
+    "summary": "Lantern Festival",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2024-02-24"
+    }
+  },
+  {
+    "summary": "International Women's Day",
+    "description": "Public holiday",
+    "start": {
+      "date": "2024-03-08"
+    }
+  },
+  {
+    "summary": "Zhonghe Festival",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2024-03-11"
+    }
+  },
+  {
+    "summary": "Arbor Day",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2024-03-12"
+    }
+  },
+  {
+    "summary": "Qing Ming Jie",
+    "description": "Public holiday",
+    "start": {
+      "date": "2024-04-04"
+    }
+  },
+  {
+    "summary": "Labour Day",
+    "description": "Public holiday",
+    "start": {
+      "date": "2024-05-01"
+    }
+  },
+  {
+    "summary": "Youth Day",
+    "description": "Public holiday",
+    "start": {
+      "date": "2024-05-04"
+    }
+  },
+  {
+    "summary": "Dragon Boat Festival",
+    "description": "Public holiday",
+    "start": {
+      "date": "2024-06-10"
+    }
+  },
+  {
+    "summary": "Chinese Valentine's Day",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2024-08-10"
+    }
+  },
+  {
+    "summary": "Spirit Festival",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2024-08-18"
+    }
+  },
+  {
+    "summary": "Teachers' Day",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2024-09-10"
+    }
+  },
+  {
+    "summary": "Mid-Autumn Festival",
+    "description": "Public holiday",
+    "start": {
+      "date": "2024-09-17"
+    }
+  },
+  {
+    "summary": "National Day",
+    "description": "Public holiday",
+    "start": {
+      "date": "2024-10-01"
+    }
+  },
+  {
+    "summary": "National Day Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2024-10-02"
+    }
+  },
+  {
+    "summary": "National Day Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2024-10-03"
+    }
+  },
+  {
+    "summary": "National Day Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2024-10-04"
+    }
+  },
+  {
+    "summary": "National Day Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2024-10-05"
+    }
+  },
+  {
+    "summary": "National Day Golden Week holiday",
+    "description": "Public holiday",
+    "start": {
+      "date": "2024-10-06"
+    }
+  },
+  {
+    "summary": "Double Ninth Festival",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2024-10-11"
+    }
+  },
+  {
+    "summary": "Christmas Day",
+    "description": "Observance\nTo hide observances, go to Google Calendar Settings > Holidays in China",
+    "start": {
+      "date": "2024-12-25"
+    }
+  }
+]

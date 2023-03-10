@@ -4,6 +4,9 @@ import { format, addMonths, subMonths } from "date-fns";
 import { Header } from "./Header";
 import { Days } from "./Days";
 import { Cells } from "./Cells";
+import KOREAHolidays from "@data/holiday/korea.json";
+import CHINAHolidays from "@data/holiday/china.json";
+import USAHolidays from "@data/holiday/usa.json";
 
 export function Calendar() {
   const [currentMonth, setCurrentMonth] = useState<Date>(new Date());
@@ -29,17 +32,29 @@ export function Calendar() {
   };
 
   useEffect(() => {
-    fetch("/api/holidays")
-      .then((res) => res.json())
-      .then((data) => {
-        let tempHolidays: any = {};
-        data?.items &&
-          data.items.forEach((item: any) => {
-            const key = item.start.date as string;
-            tempHolidays[key] = [item.summary, item.description === "공휴일"];
-          });
-        setHolidays(tempHolidays);
-      });
+    console.log("hello", KOREAHolidays);
+    let tempHolidays: any = {};
+
+    KOREAHolidays.forEach((data) => {
+      const key = data.start.date as string;
+      tempHolidays[key] = [data.summary, data.description === "Public holiday"];
+    });
+    setHolidays(tempHolidays);
+
+    // fetch("/api/holidays")
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     let tempHolidays: any = {};
+    //     data?.items &&
+    //       data.items.forEach((item: any) => {
+    //         const key = item.start.date as string;
+    //         tempHolidays[key] = [
+    //           item.summary,
+    //           item.description === "Public holiday",
+    //         ];
+    //       });
+    //     setHolidays(tempHolidays);
+    //   });
   }, []);
 
   return (

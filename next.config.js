@@ -6,6 +6,12 @@ console.log(GOOGLE_API_KEY);
 
 const nextConfig = {
   assetPrefix: !debug ? "" : "",
+  exportPathMap: function () {
+    return {
+      "/": { page: "/" },
+      "/calendar": { page: "/calendar" },
+    };
+  },
   reactStrictMode: true,
   compiler: {
     emotion: true,
