@@ -2,7 +2,8 @@
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 const debug = process.env.NODE_ENV !== "production";
 
-// basePath: "/",
+console.log(GOOGLE_API_KEY);
+
 const nextConfig = {
   assetPrefix: !debug ? "" : "",
   reactStrictMode: true,
