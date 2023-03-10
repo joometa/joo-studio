@@ -32,7 +32,7 @@ export function Calendar() {
     console.log("test1\n\n", process.env.NEXT_PUBLIC_GOOGLE_API_KEY);
     // fetch("/holiday")
     fetch(
-      `https://www.googleapis.com/calendar/v3/calendars/ko.south_korea%23holiday%40group.v.calendar.google.com/events?key=${GOOGLE_API_KEY}&orderBy=startTime&singleEvents=true&timeMin=1990-01-01T00:00:00Z&timeMax=2041-01-01T00:00:00Z`
+      `https://www.googleapis.com/calendar/v3/calendars/ko.south_korea%23holiday%40group.v.calendar.google.com/events?key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}&orderBy=startTime&singleEvents=true&timeMin=1990-01-01T00:00:00Z&timeMax=2041-01-01T00:00:00Z`
     )
       .then((res) => res.json())
       .then((data) => {
