@@ -38,7 +38,7 @@ export function Calendar() {
             const key = item.start.date as string;
             tempHolidays[key] = [item.summary, item.description === "공휴일"];
           });
-        // console.log(tempHolidays);
+        console.log(tempHolidays);
         setHolidays(tempHolidays);
       });
   }, []);
