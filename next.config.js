@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
-console.log(GOOGLE_API_KEY);
+
+// basePath: "/",
 const nextConfig = {
-  basePath: "/joo-studio",
   reactStrictMode: true,
   compiler: {
     emotion: true,
