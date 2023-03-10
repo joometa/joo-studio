@@ -32,7 +32,6 @@ export function Calendar() {
   };
 
   useEffect(() => {
-    console.log("hello", KOREAHolidays);
     let tempHolidays: any = {};
 
     KOREAHolidays.forEach((data) => {
@@ -40,21 +39,6 @@ export function Calendar() {
       tempHolidays[key] = [data.summary, data.description === "Public holiday"];
     });
     setHolidays(tempHolidays);
-
-    // fetch("/api/holidays")
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     let tempHolidays: any = {};
-    //     data?.items &&
-    //       data.items.forEach((item: any) => {
-    //         const key = item.start.date as string;
-    //         tempHolidays[key] = [
-    //           item.summary,
-    //           item.description === "Public holiday",
-    //         ];
-    //       });
-    //     setHolidays(tempHolidays);
-    //   });
   }, []);
 
   return (
