@@ -75,7 +75,7 @@ Use the calendar to check national public holidays and the lunar calendar."
           <span>공휴일 국가 선택</span>
           <Select
             placeholder="-"
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
               setCountry(e.target.value)
             }
             size="sm"
