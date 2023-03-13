@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { useRouter } from "next/router";
+import { menuClick } from "@/lib/gtm";
 
 interface Props {
   isOpen: boolean;
@@ -19,6 +20,12 @@ interface Props {
 
 export function SideDrawer({ isOpen, onOpen, onClose }: Props) {
   const router = useRouter();
+
+  const handleClickMenu = (path: string) => {
+    router.push(path);
+    menuClick(path);
+  };
+
   return (
     <>
       <Drawer
@@ -31,14 +38,18 @@ export function SideDrawer({ isOpen, onOpen, onClose }: Props) {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader>
-            <Button variant="link" size="lg" onClick={() => router.push("/")}>
+            <Button
+              variant="link"
+              size="lg"
+              onClick={() => handleClickMenu("/")}
+            >
               Home
             </Button>
           </DrawerHeader>
 
           <DrawerBody>
             <ButtonGroup>
-              <button onClick={() => router.push("/calendar")}>달력</button>
+              <button onClick={() => handleClickMenu("/calendar")}>달력</button>
               <button>날짜 계산기</button>
             </ButtonGroup>
           </DrawerBody>

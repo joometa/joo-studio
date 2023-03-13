@@ -5,14 +5,14 @@ import { Card } from "@components/home/Card";
 import { Grid, Heading } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { useRouter } from "next/router";
-
-const inter = Inter({ subsets: ["latin"] });
+import { mainCardClick } from "@/lib/gtm";
 
 export default function Home() {
   const router = useRouter();
 
   const handleClickCard = (value: string) => {
     router.push(value);
+    mainCardClick(value);
   };
 
   return (

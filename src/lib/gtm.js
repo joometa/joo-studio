@@ -6,3 +6,17 @@ export const pageview = (url) => {
     page: url,
   });
 };
+
+export const menuClick = (value) => {
+  window.dataLayer.push({
+    event: "menu_click",
+    menu_name: value,
+  });
+};
+
+export const mainCardClick = (value) => {
+  window.dataLayer.push({
+    event: "main_card_click",
+    card_name: value,
+  });
+};
