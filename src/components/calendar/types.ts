@@ -18,3 +18,5 @@ export interface DayCalcDisplayProp {
   startMonth: number;
   startDay: number;
 }
+
+export type CountryMap = "korea" | "usa" | "china";

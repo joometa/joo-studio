@@ -41,7 +41,7 @@ export function Header() {
             <Button ref={btnRef} onClick={onOpen} size="md" variant="outline">
               <HamburgerIcon />
             </Button>
-            <Menu>
+            {/* <Menu>
               <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
                 {LANG[lang]}
               </MenuButton>
@@ -49,7 +49,7 @@ export function Header() {
                 <MenuItem value="ko">한국어</MenuItem>
                 <MenuItem value="en">English</MenuItem>
               </MenuList>
-            </Menu>
+            </Menu> */}
           </div>
         </div>
       </Container>

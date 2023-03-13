@@ -7,8 +7,13 @@ import { Cells } from "./Cells";
 import KOREAHolidays from "@data/holiday/korea.json";
 import CHINAHolidays from "@data/holiday/china.json";
 import USAHolidays from "@data/holiday/usa.json";
+import { CountryMap } from "./types";
 
-export function Calendar() {
+interface Props {
+  country: CountryMap;
+}
+
+export function Calendar({ country }: Props) {
   const [currentMonth, setCurrentMonth] = useState<Date>(new Date());
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const [currentYear, setCurrentYear] = useState<string>(
@@ -33,29 +38,39 @@ export function Calendar() {
 
   useEffect(() => {
     let tempHolidays: any = {};
+    let selectedCountry: any = [];
+    if (country === "korea") selectedCountry = KOREAHolidays;
+    if (country === "usa") selectedCountry = USAHolidays;
+    if (country === "china") selectedCountry = CHINAHolidays;
 
-    KOREAHolidays.forEach((data) => {
-      const key = data.start.date as string;
-      tempHolidays[key] = [data.summary, data.description === "Public holiday"];
-    });
+    selectedCountry.length > 0 &&
+      selectedCountry.forEach((data: any) => {
+        const key = data.start.date as string;
+        tempHolidays[key] = [
+          data.summary,
+          data.description === "Public holiday",
+        ];
+      });
     setHolidays(tempHolidays);
-  }, []);
+  }, [country]);
 
   return (
-    <Container>
-      <Header
-        currentMonth={currentMonth}
-        onPrevMonth={handleClickPrevMonth}
-        onNextMonth={handleClickNextMonth}
-      />
-      <Days />
-      <Cells
-        currentMonth={currentMonth}
-        selectedDate={selectedDate}
-        onDateClick={() => {}}
-        holidays={holidays}
-      />
-    </Container>
+    <>
+      <Container>
+        <Header
+          currentMonth={currentMonth}
+          onPrevMonth={handleClickPrevMonth}
+          onNextMonth={handleClickNextMonth}
+        />
+        <Days />
+        <Cells
+          currentMonth={currentMonth}
+          selectedDate={selectedDate}
+          onDateClick={() => {}}
+          holidays={holidays}
+        />
+      </Container>
+    </>
   );
 }
 

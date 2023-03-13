@@ -21,9 +21,10 @@ interface Props {
 export function SideDrawer({ isOpen, onOpen, onClose }: Props) {
   const router = useRouter();
 
-  const handleClickMenu = (path: string) => {
-    router.push(path);
+  const handleClickMenu = async (path: string) => {
+    await router.push(path);
     menuClick(path);
+    onClose();
   };
 
   return (
