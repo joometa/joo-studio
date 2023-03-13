@@ -1,2 +1,14 @@
+# *
 User-agent: *
-Disallow:
+Disallow: /404
+
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://jootudio.com
+
+# Sitemaps
+Sitemap: https://jootudio.com/sitemap.xml
+Sitemap: https://jootudio.comserver-sitemap.xml
