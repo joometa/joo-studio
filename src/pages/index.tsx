@@ -56,18 +56,20 @@ export default function Home() {
           <div className="title">
             <Heading>간편 정보</Heading>
           </div>
-          <Grid templateColumns="repeat(3, 1fr)" gap={6}>
-            <Card
-              content="달력"
-              src="./images/calendar.png"
-              onClick={() => handleClickCard("/calendar")}
-            />
-            <Card
-              content="날짜계산기"
-              src="./images/calculator.png"
-              onClick={() => handleClickCard("/")}
-            />
-          </Grid>
+          <div className="card-container">
+            <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+              <Card
+                content="달력"
+                src="./images/calendar.png"
+                onClick={() => handleClickCard("/calendar")}
+              />
+              <Card
+                content="날짜계산기"
+                src="./images/calculator.png"
+                onClick={() => handleClickCard("/")}
+              />
+            </Grid>
+          </div>
         </Container>
       </main>
     </>
@@ -85,10 +87,19 @@ const Container = styled.div`
     justify-content: center;
     padding-bottom: 50px;
   }
+  .card-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    @media (max-width: 1200px) {
+      max-width: 90vw;
+    }
+  }
 
   @media (max-width: 1200px) {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     .button-group {
       max-width: 90vw;
       width: 100%;
