@@ -123,6 +123,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   border-top: 2px solid black;
+  word-break: break-word;
 
   .row {
     width: 100%;
