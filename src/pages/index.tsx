@@ -66,7 +66,7 @@ export default function Home() {
               <Card
                 content="날짜계산기"
                 src="./images/calculator.png"
-                onClick={() => handleClickCard("/")}
+                onClick={() => handleClickCard("/calculator/days")}
               />
             </Grid>
           </div>

@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { Title } from "@components/layout";
 import styled from "@emotion/styled";
-import { NumberForm } from "@components/calculator/days";
+import { NumberForm, Meta } from "@components/calculator/days";
 import {
   Button,
   NumberInput,
@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { format, add, sub } from "date-fns";
 import Swal from "sweetalert2";
+import Head from "next/head";
 
 interface Days {
   year: number;
@@ -89,68 +90,76 @@ export default function CalculateDays() {
   };
 
   return (
-    <Container>
+    <>
+      <Head>
+        <Meta />
+      </Head>
       <Title title="날짜 계산기" />
-      <div className="content">
-        <div className="date-box">
-          <NumberForm
-            type="year"
-            defaultValue={date.year}
-            value={date.year}
-            onChange={handleChangeYear}
-          />
-          <span className="unit">년</span>
+      <Container>
+        <div className="content">
+          <div className="date-box">
+            <NumberForm
+              type="year"
+              defaultValue={date.year}
+              value={date.year}
+              onChange={handleChangeYear}
+            />
+            <span className="unit">년</span>
 
-          <NumberForm
-            type="month"
-            defaultValue={date.month}
-            value={date.month}
-            onChange={handleChangeMonth}
-          />
-          <span className="unit">월</span>
-          <NumberForm
-            type="day"
-            defaultValue={date.day}
-            value={date.day}
-            onChange={handleChangeDay}
-          />
-          <span className="unit">일</span>
+            <NumberForm
+              type="month"
+              defaultValue={date.month}
+              value={date.month}
+              onChange={handleChangeMonth}
+            />
+            <span className="unit">월</span>
+            <NumberForm
+              type="day"
+              defaultValue={date.day}
+              value={date.day}
+              onChange={handleChangeDay}
+            />
+            <span className="unit">일</span>
+          </div>
+          <p className="desc">로부터</p>
+          <div className="calculate-box">
+            <NumberInput
+              value={inputNum}
+              onChange={(_, num) => setInputNum(num)}
+            >
+              <NumberInputField />
+            </NumberInput>
+            <span className="unit">일</span>
+            <span className="unit" style={{ color: "gray" }}>
+              {"::"}
+            </span>
+            <RadioGroup defaultValue="before" onChange={handleChangeRadio}>
+              <Stack spacing={4} direction="row">
+                <Radio colorScheme="red" value="before">
+                  전
+                </Radio>
+                <Radio colorScheme="blue" value="after">
+                  후
+                </Radio>
+              </Stack>
+            </RadioGroup>
+          </div>
+          <div className="result-box"></div>
+          <div className="button-box">
+            <Button
+              colorScheme="gray"
+              style={{ marginRight: "20px" }}
+              onClick={() => handleClickAutoSetToday()}
+            >
+              오늘 날짜로 초기화
+            </Button>
+            <Button colorScheme="gray" onClick={() => handleClickCalculate()}>
+              계산하기
+            </Button>
+          </div>
         </div>
-        <p className="desc">로부터</p>
-        <div className="calculate-box">
-          <NumberInput value={inputNum} onChange={(_, num) => setInputNum(num)}>
-            <NumberInputField />
-          </NumberInput>
-          <span className="unit">일</span>
-          <span className="unit" style={{ color: "gray" }}>
-            {"::"}
-          </span>
-          <RadioGroup defaultValue="before" onChange={handleChangeRadio}>
-            <Stack spacing={4} direction="row">
-              <Radio colorScheme="red" value="before">
-                전
-              </Radio>
-              <Radio colorScheme="blue" value="after">
-                후
-              </Radio>
-            </Stack>
-          </RadioGroup>
-        </div>
-        <div className="result-box"></div>
-        <div className="button-box">
-          <Button
-            colorScheme="gray"
-            style={{ marginRight: "20px" }}
-            onClick={() => handleClickAutoSetToday()}
-          >
-            오늘 날짜로 초기화
-          </Button>
-          <Button colorScheme="gray" onClick={() => handleClickCalculate()}>
-            계산하기
-          </Button>
-        </div>
-      </div>
-    </Container>
+      </Container>
+    </>
   );
 }
 
