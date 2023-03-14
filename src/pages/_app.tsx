@@ -54,4 +54,9 @@ const MainContainer = styled.div`
   height: 100vh;
   margin: auto;
   padding-top: 74px;
+
+  @media (max-width: 1200px) {
+    max-width: 90vw;
+    width: 100%;
+  }
 `;

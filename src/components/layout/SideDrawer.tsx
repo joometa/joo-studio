@@ -51,7 +51,9 @@ export function SideDrawer({ isOpen, onOpen, onClose }: Props) {
           <DrawerBody>
             <ButtonGroup>
               <button onClick={() => handleClickMenu("/calendar")}>달력</button>
-              <button>날짜 계산기</button>
+              <button onClick={() => handleClickMenu("/calculator/days")}>
+                날짜 계산기
+              </button>
             </ButtonGroup>
           </DrawerBody>
         </DrawerContent>
