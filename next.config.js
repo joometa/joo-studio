@@ -10,6 +10,7 @@ const nextConfig = {
     return {
       "/": { page: "/" },
       "/calendar": { page: "/calendar" },
+      "/calculator/days": { page: "/calculator/days" },
     };
   },
   reactStrictMode: true,

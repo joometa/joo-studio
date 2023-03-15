@@ -7,7 +7,10 @@ module.exports = {
   exclude: ["/server-sitemap.xml"],
   generateRobotsTxt: true,
   robotsTxtOptions: {
-    policies: [{ userAgent: "*", allow: "/" }],
+    policies: [
+      { userAgent: "*", allow: "/" },
+      { userAgent: "Yeti", allow: "/" },
+    ],
     additionalSitemaps: [
       `${siteUrl}/server-sitemap.xml`, // <==== Add here
     ],

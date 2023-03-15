@@ -8,6 +8,7 @@ import Script from "next/script";
 import { useRouter } from "next/router";
 import { GTM_ID, pageview } from "../lib/gtm";
 import { useEffect } from "react";
+import Head from "next/head";
 
 const theme = extendBaseTheme({
   components: chakraTheme.components,
@@ -39,6 +40,9 @@ export default function App({ Component, pageProps }: AppProps) {
           `,
         }}
       />
+      <Head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </Head>
       <ChakraBaseProvider theme={theme}>
         <Header />
         <MainContainer>

@@ -8,7 +8,7 @@
     "build": "rimraf public/robots.txt public/sitemap*.xml && next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "postbuild": "next-sitemap",
     "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && echo jootudio.com > out/CNAME && echo naver-site-verification: naver29cd0d06b44998aed17984cefa3c4d66.html > out/naver29cd0d06b44998aed17984cefa3c4d66.html && git add -f out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
