@@ -13,18 +13,19 @@ import {
   addMonths,
 } from "date-fns";
 import { dayCalcDisplay } from "./lunar";
+import { useCallback } from "react";
 
 interface Props {
   currentMonth: Date;
   selectedDate: Date;
-  onDateClick: () => void;
+  isCheckedGoodDay: boolean;
   holidays: any;
 }
 
 export const Cells = ({
   currentMonth,
   selectedDate,
-  onDateClick,
+  isCheckedGoodDay,
   holidays,
 }: Props) => {
   const monthStart = startOfMonth(currentMonth);
@@ -47,10 +48,28 @@ export const Cells = ({
     return currentMonth;
   };
 
+  // 손없는날 체크
+  const isGoodDay = ({ lunar }: { lunar: string | undefined }): boolean => {
+    if (!lunar) return false;
+    const arr = lunar.split(".");
+    const target = Number(arr[arr.length - 1]);
+    const GOOD_DAYS = [9, 10, 19, 20, 29, 30];
+    return GOOD_DAYS.includes(target);
+  };
+
+  const isShowGoodDay = useCallback(
+    (lunar: string | undefined): boolean => {
+      if (!isCheckedGoodDay) return false;
+      if (!true) return false;
+
+      return isGoodDay({ lunar });
+    },
+    [isCheckedGoodDay]
+  );
+
   while (day <= endDate) {
     for (let i = 0; i < 7; i++) {
       formattedDate = format(day, "d");
-      const cloneDay = day;
 
       const startYear = Number(format(currentMonth, "yyyy"));
       const startMonth = settingMonth(day, currentMonth);
@@ -76,24 +95,29 @@ export const Cells = ({
               : "valid"
           }`}
           key={i}
-          // onClick={() => onDateClick(parse(cloneDay))}
-          onClick={() => onDateClick()}
         >
           <div className="date-group">
-            <span
-              className={`
+            <div className="day-box">
+              <span
+                className={`
               ${
                 holidays[fullDate] != null && holidays[fullDate][1] == true
                   ? "text-holy"
                   : ""
               } ${
-                format(currentMonth, "M") !== format(day, "M")
-                  ? "text not-valid"
-                  : ""
-              }`}
-            >
-              {formattedDate}
-            </span>
+                  format(currentMonth, "M") !== format(day, "M")
+                    ? "text not-valid"
+                    : ""
+                }`}
+                style={{ zIndex: 10, position: "relative" }}
+              >
+                {formattedDate}
+              </span>
+              <div
+                className={isShowGoodDay(LUNAR_DAY) ? "show" : "hidden"}
+                style={{ zIndex: 2 }}
+              />
+            </div>
             <span className="lunar">{LUNAR_DAY}</span>
           </div>
           <p className="holiday">
@@ -154,12 +178,31 @@ const Container = styled.div`
       justify-content: flex-start;
       align-items: flex-start;
       font-size: 0.8em;
+
       .date-group {
         display: flex;
         width: 100%;
         padding: 6px 6px 0 6px;
         justify-content: space-between;
         align-items: flex-end;
+
+        .day-box {
+          position: relative;
+
+          .show {
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            width: 25px;
+            height: 25px;
+            background: #ffdfd4;
+            z-index: 2;
+          }
+
+          .hidden {
+            display: "none";
+          }
+        }
 
         @media (max-width: 600px) {
           flex-direction: column;

@@ -11,9 +11,10 @@ import { CountryMap } from "./types";
 
 interface Props {
   country: CountryMap;
+  isCheckedGoodDay: boolean;
 }
 
-export function Calendar({ country }: Props) {
+export function Calendar({ country, isCheckedGoodDay }: Props) {
   const [currentMonth, setCurrentMonth] = useState<Date>(new Date());
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const [currentYear, setCurrentYear] = useState<string>(
@@ -66,7 +67,7 @@ export function Calendar({ country }: Props) {
         <Cells
           currentMonth={currentMonth}
           selectedDate={selectedDate}
-          onDateClick={() => {}}
+          isCheckedGoodDay={isCheckedGoodDay}
           holidays={holidays}
         />
       </Container>

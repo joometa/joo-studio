@@ -11,7 +11,7 @@ export function Meta() {
       />
       <meta
         name="description"
-        content="국가별 공휴일과 음력을 확인할 수 있는 달력을 이용해 보세요.
+        content="국가별 공휴일과 음력, 손없는날을 확인할 수 있는 달력을 이용해 보세요.
 Use the calendar to check national public holidays and the lunar calendar."
       />
 
@@ -24,7 +24,7 @@ Use the calendar to check national public holidays and the lunar calendar."
       />
       <meta
         property="og:description"
-        content="국가별 공휴일과 음력을 확인할 수 있는 달력을 이용해 보세요.
+        content="국가별 공휴일과 음력, 손없는날을 확인할 수 있는 달력을 이용해 보세요.
 Use the calendar to check national public holidays and the lunar calendar."
       />
       <meta
@@ -41,7 +41,7 @@ Use the calendar to check national public holidays and the lunar calendar."
       />
       <meta
         property="twitter:description"
-        content="국가별 공휴일과 음력을 확인할 수 있는 달력을 이용해 보세요.
+        content="국가별 공휴일과 음력, 손없는날을 확인할 수 있는 달력을 이용해 보세요.
 Use the calendar to check national public holidays and the lunar calendar."
       />
       <meta
