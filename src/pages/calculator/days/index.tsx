@@ -12,8 +12,8 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { format, add, sub } from "date-fns";
-import Swal from "sweetalert2";
 import Head from "next/head";
+import { InfoOutlineIcon } from "@chakra-ui/icons";
 
 interface Days {
   year: number;
@@ -23,7 +23,7 @@ interface Days {
 
 export default function CalculateDays() {
   const toast = useToast();
-  const initDays = {
+  const initDays: Days = {
     year: Number(format(new Date(), "yyyy")),
     month: Number(format(new Date(), "MM")),
     day: Number(format(new Date(), "dd")),
@@ -31,6 +31,8 @@ export default function CalculateDays() {
   const [date, setDate] = useState<Days>(initDays);
   const [inputNum, setInputNum] = useState<number | undefined>();
   const [radioValue, setRadioValue] = useState<string>("before");
+  const [isCalculated, setIsCalculated] = useState<boolean>(false);
+  const [resultInfo, setResultInfo] = useState<Days>(initDays);
 
   const handleChangeYear = (value: number) =>
     setDate((prev) => ({ ...prev, year: value }));
@@ -58,30 +60,34 @@ export default function CalculateDays() {
       return;
     }
     const targetDate = `${date.year}-${date.month}-${date.day}`;
-    let resultDate: string;
+
+    let temp = {
+      year: 0,
+      month: 0,
+      day: 0,
+    };
+    const decrease = sub(new Date(targetDate), { days: inputNum });
+    const increase = add(new Date(targetDate), { days: inputNum });
     if (radioValue === "before") {
-      resultDate = format(
-        sub(new Date(targetDate), { days: inputNum }),
-        "yyyy년 MM월 dd일"
-      ).toString();
+      temp = {
+        year: Number(format(decrease, "yyyy")),
+        month: Number(format(decrease, "MM")),
+        day: Number(format(decrease, "dd")),
+      };
+      setResultInfo(temp);
     } else {
-      resultDate = format(
-        add(new Date(targetDate), { days: inputNum }),
-        "yyyy년 MM월 dd일"
-      ).toString();
+      temp = {
+        year: Number(format(increase, "yyyy")),
+        month: Number(format(increase, "MM")),
+        day: Number(format(increase, "dd")),
+      };
+      setResultInfo(temp);
     }
-    Swal.fire({
-      icon: "info",
-      html: `<b>${date.year}년 ${date.month}월 ${date.day}일로부터
-      ${inputNum}일 ${
-        radioValue === "before" ? "전은" : "후는"
-      }</b><br/><br/><strong>
-      ${resultDate} 입니다.</strong>`,
-      showCloseButton: true,
-      focusConfirm: false,
-      confirmButtonColor: "#2979ff",
-      confirmButtonText: "확인",
-    });
+    setIsCalculated(true);
+  };
+
+  const handleClickGoCalculate = () => {
+    setIsCalculated(false);
   };
 
   const handleChangeRadio = (value: string) => {
@@ -95,68 +101,98 @@ export default function CalculateDays() {
       </Head>
       <Title title="날짜 계산기" />
       <Container>
-        <div className="content">
-          <div className="date-box">
-            <NumberForm
-              type="year"
-              defaultValue={date.year}
-              value={date.year}
-              onChange={handleChangeYear}
-            />
-            <span className="unit">년</span>
+        {!isCalculated ? (
+          <>
+            <div className="content">
+              <div className="date-box">
+                <NumberForm
+                  type="year"
+                  defaultValue={date.year}
+                  value={date.year}
+                  onChange={handleChangeYear}
+                />
+                <span className="unit">년</span>
 
-            <NumberForm
-              type="month"
-              defaultValue={date.month}
-              value={date.month}
-              onChange={handleChangeMonth}
-            />
-            <span className="unit">월</span>
-            <NumberForm
-              type="day"
-              defaultValue={date.day}
-              value={date.day}
-              onChange={handleChangeDay}
-            />
-            <span className="unit">일</span>
-          </div>
-          <p className="desc">로부터</p>
-          <div className="calculate-box">
-            <NumberInput
-              value={inputNum}
-              onChange={(_, num) => setInputNum(num)}
-            >
-              <NumberInputField />
-            </NumberInput>
-            <span className="unit">일</span>
-            <span className="unit" style={{ color: "gray" }}>
-              {"::"}
-            </span>
-            <RadioGroup defaultValue="before" onChange={handleChangeRadio}>
-              <Stack spacing={4} direction="row">
-                <Radio colorScheme="red" value="before">
-                  전
-                </Radio>
-                <Radio colorScheme="blue" value="after">
-                  후
-                </Radio>
-              </Stack>
-            </RadioGroup>
-          </div>
-          <div className="result-box"></div>
-          <div className="button-box">
-            <Button
-              colorScheme="gray"
-              style={{ marginRight: "20px" }}
-              onClick={() => handleClickAutoSetToday()}
-            >
-              오늘 날짜로 초기화
-            </Button>
-            <Button colorScheme="gray" onClick={() => handleClickCalculate()}>
-              계산하기
-            </Button>
-          </div>
-        </div>
+                <NumberForm
+                  type="month"
+                  defaultValue={date.month}
+                  value={date.month}
+                  onChange={handleChangeMonth}
+                />
+                <span className="unit">월</span>
+                <NumberForm
+                  type="day"
+                  defaultValue={date.day}
+                  value={date.day}
+                  onChange={handleChangeDay}
+                />
+                <span className="unit">일</span>
+              </div>
+              <p className="desc">로부터</p>
+              <div className="calculate-box">
+                <NumberInput
+                  value={inputNum}
+                  onChange={(_, num) => setInputNum(num)}
+                >
+                  <NumberInputField />
+                </NumberInput>
+                <span className="unit">일</span>
+                <span className="unit" style={{ color: "gray" }}>
+                  {"::"}
+                </span>
+                <RadioGroup defaultValue="before" onChange={handleChangeRadio}>
+                  <Stack spacing={4} direction="row">
+                    <Radio colorScheme="red" value="before">
+                      전
+                    </Radio>
+                    <Radio colorScheme="blue" value="after">
+                      후
+                    </Radio>
+                  </Stack>
+                </RadioGroup>
+              </div>
+              <div className="result-box"></div>
+              <div className="button-box">
+                <Button
+                  colorScheme="gray"
+                  style={{ marginRight: "20px" }}
+                  onClick={() => handleClickAutoSetToday()}
+                >
+                  오늘 날짜로 초기화
+                </Button>
+                <Button
+                  colorScheme="gray"
+                  onClick={() => handleClickCalculate()}
+                >
+                  계산하기
+                </Button>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="result">
+              <div className="icon-box">
+                <InfoOutlineIcon boxSize={7} color="blue.500" />
+              </div>
+              <div className="info-box">
+                <h2>{`${date.year}년 ${date.month}월 ${date.day}일 로부터 ${
+                  inputNum ?? "O"
+                }일 ${radioValue === "before" ? "전은" : "후는"}`}</h2>
+                <desc>
+                  <strong>{`${resultInfo.year}년 ${resultInfo.month}월 ${resultInfo.day}일 `}</strong>
+                  입니다.
+                </desc>
+              </div>
+              <Button
+                colorScheme="gray"
+                onClick={() => handleClickGoCalculate()}
+              >
+                다시 계산하기
+              </Button>
+            </div>
+          </>
+        )}
       </Container>
     </>
   );
@@ -167,6 +203,35 @@ const Container = styled.div`
   height: 100%;
   margin: 0;
   position: relative;
+  .result {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+
+    .icon-box {
+    }
+
+    .info-box {
+      display: flex;
+      margin-bottom: 40px;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        padding: 15px;
+      }
+      desc {
+        text-align: center;
+        strong {
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
 
   .content {
     margin-top: 40px;
