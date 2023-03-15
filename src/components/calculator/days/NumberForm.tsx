@@ -37,6 +37,7 @@ export function NumberForm({ type, defaultValue, value, onChange }: Props) {
   return (
     <Wrap>
       <NumberInput
+        className={type}
         max={range.max}
         min={range.min}
         clampValueOnBlur={false}
@@ -55,6 +56,10 @@ export function NumberForm({ type, defaultValue, value, onChange }: Props) {
 
 const Wrap = styled.div`
   .chakra-numberinput {
-    max-width: 100px;
+    max-width: 90px;
+    width: 100%;
+  }
+  .chakra-numberinput.year {
+    min-width: 90px;
   }
 `;

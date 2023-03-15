@@ -70,7 +70,6 @@ export default function CalculateDays() {
         "yyyy년 MM월 dd일"
       ).toString();
     }
-
     Swal.fire({
       icon: "info",
       html: `<b>${date.year}년 ${date.month}월 ${date.day}일로부터
@@ -186,7 +185,7 @@ const Container = styled.div`
       .unit {
         margin: 10px;
         font-weight: 500;
-        margin-right: 25px;
+        margin-right: 12px;
 
         :last-child {
           margin-right: 0;
