@@ -25,8 +25,8 @@ export default function Age() {
   const [birth, setBirth] = useState<Days>(initDays);
   const [isCalculated, setIsCalculated] = useState<boolean>(false);
   const [age, setAge] = useState<number>(0);
-  const [aliveDays, setAliveDays] = useState<number>(0);
-  const [aliveMonth, setAliveMonth] = useState<number>(0);
+  const [aliveDays, setAliveDays] = useState<number>(1);
+  const [aliveMonth, setAliveMonth] = useState<number>(1);
 
   const handleChangeYear = (value: number) =>
     setBirth((prev) => ({ ...prev, year: value }));
@@ -44,7 +44,11 @@ export default function Age() {
     );
     const tempAge = currentYear - birth.year;
     const realAge = isPassBirthDay ? tempAge : tempAge - 1;
-
+    console.log(
+      "result",
+      differenceInDays(new Date(), new Date(BIRTH_DAY)),
+      differenceInMonths(new Date(), new Date(BIRTH_DAY))
+    );
     setAliveDays(differenceInDays(new Date(), new Date(BIRTH_DAY)));
     setAliveMonth(differenceInMonths(new Date(), new Date(BIRTH_DAY)));
     setAge(realAge);
@@ -108,19 +112,20 @@ export default function Age() {
               </div>
               <div className="info-box">
                 <h2>{`${birth.year}년 ${birth.month}월 ${birth.day}일 출생일의`}</h2>
-                <desc>
+                <p>
                   만나이는
-                  <strong> {age}살 </strong>
+                  <strong> {age >= 0 ? age : 0}살 </strong>
                   입니다.
-                </desc>
+                </p>
               </div>
               <div className="extra-info-box">
                 <div className="extra-info">
-                  오늘은 태어난지 <strong>{aliveDays.toLocaleString()}</strong>
+                  오늘은 태어난지{" "}
+                  <strong>{aliveDays.toLocaleString("ko-kr")}</strong>
                   일째되는 날입니다.
                 </div>
                 <div className="extra-info">
-                  생후 <strong>{aliveMonth.toLocaleString()}</strong>
+                  생후 <strong>{aliveMonth.toLocaleString("ko-kr")}</strong>
                   개월입니다.
                 </div>
               </div>
@@ -196,7 +201,7 @@ const Container = styled.div`
         font-weight: 500;
         font-size: 1.1rem;
       }
-      desc {
+      p {
         text-align: center;
         strong {
           font-size: 1.2em;

@@ -174,10 +174,10 @@ export default function CalculateDays() {
                 <h2>{`${date.year}년 ${date.month}월 ${date.day}일 로부터 ${
                   inputNum ?? "O"
                 }일 ${radioValue === "before" ? "전은" : "후는"}`}</h2>
-                <desc>
+                <p>
                   <strong>{`${resultInfo.year}년 ${resultInfo.month}월 ${resultInfo.day}일 `}</strong>
                   입니다.
-                </desc>
+                </p>
               </div>
               <Button
                 colorScheme="gray"
@@ -219,7 +219,7 @@ const Container = styled.div`
       h2 {
         padding: 15px;
       }
-      desc {
+      p {
         text-align: center;
         strong {
           font-size: 1.2em;
