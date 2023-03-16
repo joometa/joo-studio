@@ -8,6 +8,7 @@ const nextConfig = {
       "/": { page: "/" },
       "/calendar": { page: "/calendar" },
       "/calculator/days": { page: "/calculator/days" },
+      "/calculator/days": { page: "/calculator/age" },
       "/goodday": { page: "/goodday" },
     };
   },

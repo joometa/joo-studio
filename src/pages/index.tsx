@@ -41,6 +41,11 @@ export default function Home() {
                 src="./images/clover.png"
                 onClick={() => handleClickCard("/goodday")}
               />
+              <Card
+                content="만나이 계산"
+                src="./images/age.png"
+                onClick={() => handleClickCard("/calculator/age")}
+              />
             </Grid>
           </div>
         </Container>

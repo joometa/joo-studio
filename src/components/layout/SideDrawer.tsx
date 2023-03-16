@@ -52,6 +52,9 @@ export function SideDrawer({ isOpen, onOpen, onClose }: Props) {
               <button onClick={() => handleClickMenu("/goodday")}>
                 연도별 손없는날
               </button>
+              <button onClick={() => handleClickMenu("/calculator/age")}>
+                만나이 계산
+              </button>
             </ButtonGroup>
           </DrawerBody>
         </DrawerContent>

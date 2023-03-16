@@ -14,12 +14,7 @@ import {
 import { format, add, sub } from "date-fns";
 import Head from "next/head";
 import { InfoOutlineIcon } from "@chakra-ui/icons";
-
-interface Days {
-  year: number;
-  month: number;
-  day: number;
-}
+import { Days } from "@interface/calculator/types";
 
 export default function CalculateDays() {
   const toast = useToast();
