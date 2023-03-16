@@ -25,7 +25,7 @@ export function Header() {
   };
 
   const handleScroll = (e: any) => {
-    console.log(e.srcElement.scrollingElement.scrollTop);
+    // console.log(e.srcElement.scrollingElement.scrollTop);
     setScrollHeight(e.srcElement.scrollingElement.scrollTop);
   };
 

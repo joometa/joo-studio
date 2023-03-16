@@ -4,10 +4,12 @@ export function Meta() {
   return (
     <>
       {/* <!-- Primary Meta Tags --> */}
-      <title>Calendar :: 달력(양력/음력), 공휴일 - jootudio.com</title>
+      <title>
+        Calendar :: 달력(양력/음력), 공휴일, 손없는날 - jootudio.com
+      </title>
       <meta
         name="title"
-        content="Calendar :: 달력(양력/음력), 공휴일 - jootudio.com"
+        content="Calendar :: 달력(양력/음력), 공휴일, 손없는날 - jootudio.com"
       />
       <meta
         name="description"
@@ -20,7 +22,7 @@ Use the calendar to check national public holidays and the lunar calendar."
       <meta property="og:url" content="https://jootudio.com/calendar" />
       <meta
         property="og:title"
-        content="Calendar :: 달력(양력/음력), 공휴일 - jootudio.com"
+        content="Calendar :: 달력(양력/음력), 공휴일, 손없는날 - jootudio.com"
       />
       <meta
         property="og:description"
@@ -37,7 +39,7 @@ Use the calendar to check national public holidays and the lunar calendar."
       <meta property="twitter:url" content="https://jootudio.com/calendar" />
       <meta
         property="twitter:title"
-        content="Calendar :: 달력(양력/음력), 공휴일 - jootudio.com"
+        content="Calendar :: 달력(양력/음력), 공휴일, 손없는날 - jootudio.com"
       />
       <meta
         property="twitter:description"

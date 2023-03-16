@@ -29,12 +29,7 @@ export function SideDrawer({ isOpen, onOpen, onClose }: Props) {
 
   return (
     <>
-      <Drawer
-        isOpen={isOpen}
-        placement="left"
-        onClose={onClose}
-        // finalFocusRef={ref}
-      >
+      <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
@@ -53,6 +48,9 @@ export function SideDrawer({ isOpen, onOpen, onClose }: Props) {
               <button onClick={() => handleClickMenu("/calendar")}>달력</button>
               <button onClick={() => handleClickMenu("/calculator/days")}>
                 날짜 계산기
+              </button>
+              <button onClick={() => handleClickMenu("/goodday")}>
+                연도별 손없는날
               </button>
             </ButtonGroup>
           </DrawerBody>
