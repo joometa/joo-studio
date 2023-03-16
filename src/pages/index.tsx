@@ -25,28 +25,41 @@ export default function Home() {
             <Heading>간편 정보</Heading>
           </div>
           <div className="card-container">
-            <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+            <div className="card-wrap">
               <Card
                 content="달력"
                 src="./images/calendar.png"
                 onClick={() => handleClickCard("/calendar")}
               />
+            </div>
+            <div className="card-wrap">
               <Card
                 content="날짜계산기"
                 src="./images/calculator.png"
                 onClick={() => handleClickCard("/calculator/days")}
               />
+            </div>
+            <div className="card-wrap">
               <Card
                 content="연도별 손없는날"
                 src="./images/clover.png"
                 onClick={() => handleClickCard("/goodday")}
               />
+            </div>
+            <div className="card-wrap">
               <Card
                 content="만나이 계산"
                 src="./images/age.png"
                 onClick={() => handleClickCard("/calculator/age")}
               />
-            </Grid>
+            </div>
+            {/* <div className="card-wrap">
+              <Card
+                content="썸네일 생성기"
+                src="./images/thumbnail.png"
+                onClick={() => handleClickCard("/thumbnailMaker")}
+              />
+            </div> */}
           </div>
         </Container>
       </main>
@@ -66,11 +79,27 @@ const Container = styled.div`
     padding-bottom: 50px;
   }
   .card-container {
-    max-width: 1400px;
+    max-width: 90vw;
     width: 100%;
     margin: auto;
-    @media (max-width: 1200px) {
-      max-width: 90vw;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: auto;
+
+    @media screen and (min-width: 474px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (min-width: 1024px) {
+      max-width: 1000px;
+    }
+
+    .card-wrap {
+      padding: 15px;
     }
   }
 
