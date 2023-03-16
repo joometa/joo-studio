@@ -3,7 +3,8 @@ import styled from "@emotion/styled";
 import Head from "next/head";
 import React, { useState } from "react";
 import { NumberForm } from "@components/calculator/days";
-import { Button, useToast } from "@chakra-ui/react";
+import { Meta } from "@components/calculator/age";
+import { Button } from "@chakra-ui/react";
 import {
   format,
   add,
@@ -55,7 +56,9 @@ export default function Age() {
 
   return (
     <>
-      <Head>hi</Head>
+      <Head>
+        <Meta />
+      </Head>
       <Title title="만나이 계산" />
       <Container>
         {!isCalculated ? (
