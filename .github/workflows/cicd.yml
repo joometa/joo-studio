@@ -22,11 +22,11 @@ jobs:
       - run: npm install
 
       - name: Build
-        run: | 
+        run: |
           echo "remove rotots.txt & sitemap.xml"
           rimraf public/robots.txt public/sitemap*.xml
-        run: npm run build
-        run: |
+      - run: npm run build
+      - run: |
           echo "export : make /out directory"    
           npm run export
         env:
