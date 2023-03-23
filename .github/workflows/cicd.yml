@@ -6,27 +6,23 @@ on:
   pull_request:
     branches: ["main"]
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          persist-credentials: false
 
       - name: Install Dependencies
-        uses: axtions/setup-node@v3
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19.x
+
       - run: npm install
 
       - name: Build
-      - run: |
-          echo "remove rotots.txt & sitemap.xml"
-          rimraf public/robots.txt public/sitemap*.xml
+      - run: echo "remove rotots.txt & sitemap.xml"
+      - run: rimraf public/robots.txt public/sitemap*.xml
 
       - run: npm run build
       - run: |
