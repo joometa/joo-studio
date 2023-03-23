@@ -1,0 +1,45 @@
+name: Deploy to Github Pages
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: Install Dependencies
+        uses: axtions/setup-node@v3
+      - run: npm install
+
+      - name: Build
+      - run: |
+          echo "remove rotots.txt & sitemap.xml"
+          rimraf public/robots.txt public/sitemap*.xml
+
+      - run: npm run build
+      - run: |
+          echo "export : make /out directory"    
+          npm run export
+        env:
+          CI: true
+          DEPLOY_TARGET: gh-pages
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: out
+          CLEAN: true
