@@ -24,7 +24,7 @@ jobs:
       - name: Build
         run: |
           echo "remove rotots.txt & sitemap.xml"
-          rimraf public/robots.txt public/sitemap*.xml
+          rm -rf public/robots.txt public/sitemap*.xml
       - run: npm run build
       - run: |
           echo "export : make /out directory"    
