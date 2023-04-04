@@ -6,7 +6,6 @@ import KY_Chart from "@data/song-chart/ky-chart.json";
 import TJ_Chart from "@data/song-chart/tj-chart.json";
 import { crawlerTrigger } from "../../../server/crawler/song-chart/index";
 import { Select } from "@chakra-ui/react";
-import { format } from "date-fns";
 import { RankTable, Meta } from "@components/popularMusicChart";
 import Head from "next/head";
 

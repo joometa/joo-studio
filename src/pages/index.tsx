@@ -63,6 +63,13 @@ export default function Home() {
                 onClick={() => handleClickCard("/popular-music-chart")}
               />
             </div>
+            <div className="card-wrap">
+              <Card
+                content="메모장"
+                src="./images/memo.png"
+                onClick={() => handleClickCard("/memo")}
+              />
+            </div>
             {/* <div className="card-wrap">
               <Card
                 content="썸네일 생성기"
