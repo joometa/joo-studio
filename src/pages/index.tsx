@@ -5,12 +5,15 @@ import { Grid, Heading } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { useRouter } from "next/router";
 import { mainCardClick } from "@/lib/gtm";
+import { useEffect } from "react";
 
 export default function Home() {
   const router = useRouter();
 
   const handleClickCard = (value: string) => {
-    router.push(value);
+    router
+      .push(value)
+      .then(() => window.scrollTo({ top: 0, behavior: "auto" }));
     mainCardClick(value);
   };
 
@@ -43,7 +46,7 @@ export default function Home() {
               <Card
                 content="연도별 손없는날"
                 src="./images/clover.png"
-                onClick={() => handleClickCard("/goodday")}
+                onClick={() => handleClickCard("/good-day")}
               />
             </div>
             <div className="card-wrap">
@@ -51,6 +54,13 @@ export default function Home() {
                 content="만나이 계산"
                 src="./images/age.png"
                 onClick={() => handleClickCard("/calculator/age")}
+              />
+            </div>
+            <div className="card-wrap">
+              <Card
+                content="노래방 인기 차트"
+                src="./images/music-chart.png"
+                onClick={() => handleClickCard("/popular-music-chart")}
               />
             </div>
             {/* <div className="card-wrap">
