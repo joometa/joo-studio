@@ -11,6 +11,7 @@ const nextConfig = {
       "/calculator/age": { page: "/calculator/age" },
       "/good-day": { page: "/good-day" },
       "/popular-music-chart": { page: "/popular-music-chart" },
+      "/memo": { page: "/memo" },
     };
   },
   reactStrictMode: true,

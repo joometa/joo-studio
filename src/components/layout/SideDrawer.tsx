@@ -58,6 +58,7 @@ export function SideDrawer({ isOpen, onOpen, onClose }: Props) {
               <button onClick={() => handleClickMenu("/popular-music-chart")}>
                 노래방 인기 차트
               </button>
+              <button onClick={() => handleClickMenu("/memo")}>메모장</button>
             </ButtonGroup>
           </DrawerBody>
         </DrawerContent>
