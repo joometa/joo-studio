@@ -9,13 +9,24 @@ const nextConfig = {
       "/calendar": { page: "/calendar" },
       "/calculator/days": { page: "/calculator/days" },
       "/calculator/age": { page: "/calculator/age" },
-      "/goodday": { page: "/goodday" },
+      "/good-day": { page: "/good-day" },
+      "/popular-music-chart": { page: "/popular-music-chart" },
     };
   },
   reactStrictMode: true,
   compiler: {
     emotion: true,
   },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: "/crawler/song-chart/:path*",
+  //       destination: `${
+  //         process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"
+  //       }/song-chart/:path*`,
+  //     },
+  //   ];
+  // },
 };
 
 module.exports = nextConfig;
