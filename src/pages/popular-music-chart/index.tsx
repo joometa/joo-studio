@@ -7,7 +7,8 @@ import TJ_Chart from "@data/song-chart/tj-chart.json";
 import { crawlerTrigger } from "../../../server/crawler/song-chart/index";
 import { Select } from "@chakra-ui/react";
 import { format } from "date-fns";
-import { RankTable } from "@components/popularMusicChart";
+import { RankTable, Meta } from "@components/popularMusicChart";
+import Head from "next/head";
 
 export const getStaticProps = async () => {
   await crawlerTrigger();
@@ -33,6 +34,9 @@ export default function PopularMusicChart({
 
   return (
     <>
+      <Head>
+        <Meta />
+      </Head>
       <Title title="노래방 인기 차트" />
       <Container>
         <div className="header">
