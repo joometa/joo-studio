@@ -8,6 +8,7 @@
       "@data": ["./src/data"],
       "@data/*": ["./src/data/*"],
       "@constants/*": ["./src/constants/*"],
+      "@interface": ["./src/interface"],
       "@interface/*": ["./src/interface/*"]
     }
   }

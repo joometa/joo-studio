@@ -9,12 +9,29 @@ import { useRouter } from "next/router";
 import { GTM_ID, pageview } from "../lib/gtm";
 import { useEffect } from "react";
 import Head from "next/head";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
 
 const theme = extendBaseTheme({
   components: chakraTheme.components,
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCb-UdjNr7D0p3PGzgpBNXG97RA-4GIR3Y",
+    authDomain: "jootudio.firebaseapp.com",
+    projectId: "jootudio",
+    storageBucket: "jootudio.appspot.com",
+    messagingSenderId: "560662392455",
+    appId: "1:560662392455:web:0f51d882fd5e9d4dbd5222",
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
   const router = useRouter();
 
   useEffect(() => {

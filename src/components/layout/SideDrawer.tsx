@@ -22,7 +22,7 @@ export function SideDrawer({ isOpen, onOpen, onClose }: Props) {
   const router = useRouter();
 
   const handleClickMenu = async (path: string) => {
-    await router.push(path);
+    await router.push(path).then(() => window.scrollTo(0, 0));
     menuClick(path);
     onClose();
   };
@@ -49,11 +49,14 @@ export function SideDrawer({ isOpen, onOpen, onClose }: Props) {
               <button onClick={() => handleClickMenu("/calculator/days")}>
                 날짜 계산기
               </button>
-              <button onClick={() => handleClickMenu("/goodday")}>
+              <button onClick={() => handleClickMenu("/good-day")}>
                 연도별 손없는날
               </button>
               <button onClick={() => handleClickMenu("/calculator/age")}>
                 만나이 계산
+              </button>
+              <button onClick={() => handleClickMenu("/popular-music-chart")}>
+                노래방 인기 차트
               </button>
             </ButtonGroup>
           </DrawerBody>

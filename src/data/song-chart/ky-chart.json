@@ -1,0 +1,560 @@
+{
+  "crawledDate": "2023-04-04",
+  "musicList": [
+    {
+      "rank": 1,
+      "songNumber": 28707,
+      "songTitle": "사건의 지평선",
+      "singer": "윤하      "
+    },
+    {
+      "rank": 2,
+      "songNumber": 9431,
+      "songTitle": "소주 한잔",
+      "singer": "임창정"
+    },
+    { "rank": 3, "songNumber": 69033, "songTitle": "가시", "singer": "버즈  " },
+    { "rank": 4, "songNumber": 6286, "songTitle": "Tears", "singer": "소찬휘" },
+    {
+      "rank": 5,
+      "songNumber": 64011,
+      "songTitle": "심",
+      "singer": "얀(Yarn)     "
+    },
+    {
+      "rank": 6,
+      "songNumber": 87706,
+      "songTitle": "안동역에서",
+      "singer": "진성  "
+    },
+    {
+      "rank": 7,
+      "songNumber": 23291,
+      "songTitle": "사랑은 늘 도망가 (드라마 신사와 아가씨)",
+      "singer": "임영웅"
+    },
+    {
+      "rank": 8,
+      "songNumber": 5830,
+      "songTitle": "이미 슬픈 사랑",
+      "singer": "야다  "
+    },
+    {
+      "rank": 9,
+      "songNumber": 65782,
+      "songTitle": "Monologue",
+      "singer": "버즈  "
+    },
+    {
+      "rank": 10,
+      "songNumber": 91478,
+      "songTitle": "모든 날, 모든 순간 (드라마 키스 먼저...)",
+      "singer": "폴킴    "
+    },
+    {
+      "rank": 11,
+      "songNumber": 9034,
+      "songTitle": "그래서 그대는",
+      "singer": "얀(Yarn)"
+    },
+    {
+      "rank": 12,
+      "songNumber": 46868,
+      "songTitle": "술 한잔해요",
+      "singer": "지아         "
+    },
+    {
+      "rank": 13,
+      "songNumber": 3890,
+      "songTitle": "가질 수 없는 너",
+      "singer": "BANK  "
+    },
+    {
+      "rank": 14,
+      "songNumber": 48848,
+      "songTitle": "보릿고개",
+      "singer": "진성  "
+    },
+    {
+      "rank": 15,
+      "songNumber": 49082,
+      "songTitle": "어디에도",
+      "singer": "M.C THE MAX !     "
+    },
+    { "rank": 16, "songNumber": 9321, "songTitle": "친구", "singer": "안재욱" },
+    {
+      "rank": 17,
+      "songNumber": 90322,
+      "songTitle": "좋니",
+      "singer": "윤종신  "
+    },
+    {
+      "rank": 18,
+      "songNumber": 87571,
+      "songTitle": "미운 사랑",
+      "singer": "진미령       "
+    },
+    {
+      "rank": 19,
+      "songNumber": 45117,
+      "songTitle": "응급실 (드라마\"쾌걸춘향\")",
+      "singer": "izi   "
+    },
+    {
+      "rank": 20,
+      "songNumber": 46485,
+      "songTitle": "비와 당신",
+      "singer": "럼블피쉬"
+    },
+    {
+      "rank": 21,
+      "songNumber": 68473,
+      "songTitle": "삭제",
+      "singer": "이승기"
+    },
+    {
+      "rank": 22,
+      "songNumber": 76588,
+      "songTitle": "초혼",
+      "singer": "장윤정"
+    },
+    {
+      "rank": 23,
+      "songNumber": 7086,
+      "songTitle": "사랑.TWO",
+      "singer": "윤도현"
+    },
+    {
+      "rank": 24,
+      "songNumber": 63269,
+      "songTitle": "체념",
+      "singer": "BIG MAMA"
+    },
+    {
+      "rank": 25,
+      "songNumber": 6048,
+      "songTitle": "천년의 사랑",
+      "singer": "박완규"
+    },
+    {
+      "rank": 26,
+      "songNumber": 45387,
+      "songTitle": "애인 있어요",
+      "singer": "이은미"
+    },
+    { "rank": 27, "songNumber": 46863, "songTitle": "형", "singer": "노라조" },
+    {
+      "rank": 28,
+      "songNumber": 1220,
+      "songTitle": "어쩌다 마주친 그대",
+      "singer": "송골매"
+    },
+    {
+      "rank": 29,
+      "songNumber": 78629,
+      "songTitle": "다시 사랑한다면 (니글니글 버터플라이)",
+      "singer": "김필  "
+    },
+    {
+      "rank": 30,
+      "songNumber": 23794,
+      "songTitle": "내가 아니라도",
+      "singer": "주호      "
+    },
+    {
+      "rank": 31,
+      "songNumber": 22030,
+      "songTitle": "응급실 (Original Version)",
+      "singer": "izi   "
+    },
+    {
+      "rank": 32,
+      "songNumber": 4089,
+      "songTitle": "슬퍼지려 하기전에",
+      "singer": "쿨    "
+    },
+    {
+      "rank": 33,
+      "songNumber": 62666,
+      "songTitle": "낭만 고양이",
+      "singer": "CHERRY FILTER"
+    },
+    {
+      "rank": 34,
+      "songNumber": 21445,
+      "songTitle": "평행선",
+      "singer": "문희옥"
+    },
+    {
+      "rank": 35,
+      "songNumber": 45195,
+      "songTitle": "인연(동녘바람)",
+      "singer": "이선희"
+    },
+    {
+      "rank": 36,
+      "songNumber": 4448,
+      "songTitle": "서른 즈음에",
+      "singer": "김광석"
+    },
+    {
+      "rank": 37,
+      "songNumber": 6348,
+      "songTitle": "너를 위해(영화\"동감\")",
+      "singer": "임재범"
+    },
+    {
+      "rank": 38,
+      "songNumber": 24033,
+      "songTitle": "해요 (2022)",
+      "singer": "#안녕 "
+    },
+    {
+      "rank": 39,
+      "songNumber": 95592,
+      "songTitle": "Monologue",
+      "singer": "TEI   "
+    },
+    { "rank": 40, "songNumber": 9290, "songTitle": "희재", "singer": "성시경" },
+    {
+      "rank": 41,
+      "songNumber": 49292,
+      "songTitle": "그대라는 사치",
+      "singer": "한동근            "
+    },
+    {
+      "rank": 42,
+      "songNumber": 79945,
+      "songTitle": "포장마차",
+      "singer": "황인욱       "
+    },
+    {
+      "rank": 43,
+      "songNumber": 24540,
+      "songTitle": "와스레나이 (Prod By 디핵)",
+      "singer": "다나카            "
+    },
+    {
+      "rank": 44,
+      "songNumber": 98077,
+      "songTitle": "한잔해",
+      "singer": "박군             "
+    },
+    {
+      "rank": 45,
+      "songNumber": 45229,
+      "songTitle": "나에게로 떠나는 여행",
+      "singer": "버즈  "
+    },
+    {
+      "rank": 46,
+      "songNumber": 29066,
+      "songTitle": "Ditto",
+      "singer": "NewJeans         "
+    },
+    {
+      "rank": 47,
+      "songNumber": 23505,
+      "songTitle": "취중 고백",
+      "singer": "김민석(멜로망스)"
+    },
+    {
+      "rank": 48,
+      "songNumber": 76229,
+      "songTitle": "첫눈처럼 너에게 가겠다 (드라마\"도깨비\")",
+      "singer": "에일리  "
+    },
+    {
+      "rank": 49,
+      "songNumber": 1479,
+      "songTitle": "사랑했지만",
+      "singer": "김광석"
+    },
+    {
+      "rank": 50,
+      "songNumber": 28907,
+      "songTitle": "Hype boy",
+      "singer": "NewJeans         "
+    },
+    {
+      "rank": 51,
+      "songNumber": 47499,
+      "songTitle": "Hello",
+      "singer": "허각       "
+    },
+    {
+      "rank": 52,
+      "songNumber": 9343,
+      "songTitle": "귀거래사",
+      "singer": "김신우"
+    },
+    {
+      "rank": 53,
+      "songNumber": 85068,
+      "songTitle": "남자를 몰라",
+      "singer": "버즈  "
+    },
+    {
+      "rank": 54,
+      "songNumber": 58800,
+      "songTitle": "오라버니",
+      "singer": "금잔디"
+    },
+    {
+      "rank": 55,
+      "songNumber": 81136,
+      "songTitle": "버스 안에서(2006)",
+      "singer": "ZA ZA "
+    },
+    {
+      "rank": 56,
+      "songNumber": 68045,
+      "songTitle": "그 집 앞",
+      "singer": "이재성"
+    },
+    {
+      "rank": 57,
+      "songNumber": 45246,
+      "songTitle": "서울의 달",
+      "singer": "김건모"
+    },
+    {
+      "rank": 58,
+      "songNumber": 62836,
+      "songTitle": "One Love",
+      "singer": "M.C THE MAX !"
+    },
+    {
+      "rank": 59,
+      "songNumber": 3977,
+      "songTitle": "준비 없는 이별",
+      "singer": "녹색지대"
+    },
+    {
+      "rank": 60,
+      "songNumber": 27615,
+      "songTitle": "아로하(드라마 \"슬기로운 의사 생활\")",
+      "singer": "조정석"
+    },
+    {
+      "rank": 61,
+      "songNumber": 64799,
+      "songTitle": "사랑아",
+      "singer": "장윤정       "
+    },
+    {
+      "rank": 62,
+      "songNumber": 796,
+      "songTitle": "희나리",
+      "singer": "구창모"
+    },
+    {
+      "rank": 63,
+      "songNumber": 27438,
+      "songTitle": "막걸리 한잔",
+      "singer": "영탁  "
+    },
+    {
+      "rank": 64,
+      "songNumber": 46582,
+      "songTitle": "8282",
+      "singer": "다비치       "
+    },
+    { "rank": 65, "songNumber": 6344, "songTitle": "멍", "singer": "김현정" },
+    {
+      "rank": 66,
+      "songNumber": 85143,
+      "songTitle": "그녀를 사랑해줘요",
+      "singer": "하동균"
+    },
+    { "rank": 67, "songNumber": 5422, "songTitle": "애상", "singer": "쿨    " },
+    {
+      "rank": 68,
+      "songNumber": 3658,
+      "songTitle": "잘못된 만남",
+      "singer": "김건모"
+    },
+    {
+      "rank": 69,
+      "songNumber": 48246,
+      "songTitle": "스물다섯, 스물하나",
+      "singer": "자우림"
+    },
+    {
+      "rank": 70,
+      "songNumber": 23582,
+      "songTitle": "호랑수월가",
+      "singer": "탑현  "
+    },
+    {
+      "rank": 71,
+      "songNumber": 24793,
+      "songTitle": "심",
+      "singer": "DK(디셈버)     "
+    },
+    {
+      "rank": 72,
+      "songNumber": 5114,
+      "songTitle": "금지된 사랑",
+      "singer": "김경호"
+    },
+    {
+      "rank": 73,
+      "songNumber": 59620,
+      "songTitle": "바램",
+      "singer": "노사연"
+    },
+    {
+      "rank": 74,
+      "songNumber": 21022,
+      "songTitle": "흔들리는 꽃들 속에서 네 샴푸 향이 느껴진 거야",
+      "singer": "장범준"
+    },
+    {
+      "rank": 75,
+      "songNumber": 46773,
+      "songTitle": "사랑 비",
+      "singer": "김태우"
+    },
+    {
+      "rank": 76,
+      "songNumber": 47552,
+      "songTitle": "서쪽 하늘",
+      "singer": "울랄라세션"
+    },
+    {
+      "rank": 77,
+      "songNumber": 45528,
+      "songTitle": "사랑 안 해",
+      "singer": "백지영"
+    },
+    {
+      "rank": 78,
+      "songNumber": 88943,
+      "songTitle": "나에게로의 초대(이상한 나라의 앨리스,하트다...",
+      "singer": "조유진,박기영"
+    },
+    {
+      "rank": 79,
+      "songNumber": 46283,
+      "songTitle": "라라라",
+      "singer": "SG워너비"
+    },
+    {
+      "rank": 80,
+      "songNumber": 83886,
+      "songTitle": "붉은 노을",
+      "singer": "빅뱅            "
+    },
+    {
+      "rank": 81,
+      "songNumber": 62858,
+      "songTitle": "보고싶다",
+      "singer": "김범수"
+    },
+    {
+      "rank": 82,
+      "songNumber": 85183,
+      "songTitle": "나는 나비",
+      "singer": "윤도현밴드"
+    },
+    { "rank": 83, "songNumber": 4843, "songTitle": "캔디", "singer": "H.O.T " },
+    {
+      "rank": 84,
+      "songNumber": 7153,
+      "songTitle": "비상",
+      "singer": "임재범       "
+    },
+    {
+      "rank": 85,
+      "songNumber": 77480,
+      "songTitle": "오래된 노래",
+      "singer": "스탠딩 에그   "
+    },
+    {
+      "rank": 86,
+      "songNumber": 49720,
+      "songTitle": "My Way (드라마\"돈꽃\")",
+      "singer": "이수      "
+    },
+    {
+      "rank": 87,
+      "songNumber": 78247,
+      "songTitle": "잠시만 안녕 (Original Ver.)",
+      "singer": "M.C THE MAX !"
+    },
+    {
+      "rank": 88,
+      "songNumber": 86496,
+      "songTitle": "나에게 그대만이(드라마 \"다 함께 차차차\")",
+      "singer": "유해준"
+    },
+    { "rank": 89, "songNumber": 7393, "songTitle": "해요", "singer": "정인호" },
+    {
+      "rank": 90,
+      "songNumber": 48367,
+      "songTitle": "너의 모든 순간(드라마 \"별에서 온 그대\")",
+      "singer": "성시경"
+    },
+    {
+      "rank": 91,
+      "songNumber": 87532,
+      "songTitle": "가족사진",
+      "singer": "김진호"
+    },
+    {
+      "rank": 92,
+      "songNumber": 22924,
+      "songTitle": "신호등",
+      "singer": "이무진"
+    },
+    {
+      "rank": 93,
+      "songNumber": 78560,
+      "songTitle": "Marry Me",
+      "singer": "구윤회,마크툽(MAKTUB)"
+    },
+    {
+      "rank": 94,
+      "songNumber": 68889,
+      "songTitle": "우연히",
+      "singer": "우연이"
+    },
+    {
+      "rank": 95,
+      "songNumber": 27323,
+      "songTitle": "너의 번호를 누르고 (Prod. 영화처럼)",
+      "singer": "#안녕             "
+    },
+    {
+      "rank": 96,
+      "songNumber": 47703,
+      "songTitle": "나를 사랑했던 사람아",
+      "singer": "허각  "
+    },
+    {
+      "rank": 97,
+      "songNumber": 78818,
+      "songTitle": "너였다면 (드라마\"또 오해영\")",
+      "singer": "정승환    "
+    },
+    {
+      "rank": 98,
+      "songNumber": 47889,
+      "songTitle": "보여 줄게",
+      "singer": "에일리       "
+    },
+    {
+      "rank": 99,
+      "songNumber": 6101,
+      "songTitle": "천상 재회",
+      "singer": "최진희"
+    },
+    {
+      "rank": 100,
+      "songNumber": 3792,
+      "songTitle": "낭만에 대하여",
+      "singer": "최백호"
+    }
+  ]
+}
