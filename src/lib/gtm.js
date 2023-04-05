@@ -1,5 +1,5 @@
 export const GTM_ID = process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID;
-const isProd = process.env.NODE_ENV !== "production";
+const isProd = process.env.NODE_ENV === "production";
 
 export const pageview = (url) => {
   if (!isProd) return;
