@@ -21,7 +21,7 @@ export const getStaticProps = async () => {
       tj: TJ_Chart,
       ky: KY_Chart,
     },
-    revalidate: day * 3,
+    revalidate: minute,
   };
 };
 
