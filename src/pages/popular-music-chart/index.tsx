@@ -4,13 +4,13 @@ import styled from "@emotion/styled";
 import { InferGetStaticPropsType } from "next";
 import KY_Chart from "@data/song-chart/ky-chart.json";
 import TJ_Chart from "@data/song-chart/tj-chart.json";
-import { crawlerTrigger } from "../../../server/crawler/song-chart/index";
+// import { crawlerTrigger } from "../../../server/crawler/song-chart/index";
 import { Select } from "@chakra-ui/react";
 import { RankTable, Meta } from "@components/popularMusicChart";
 import Head from "next/head";
 
 export const getStaticProps = async () => {
-  await crawlerTrigger();
+  // await crawlerTrigger();
 
   const minute = 60;
   const hour = minute * 60;
@@ -56,13 +56,17 @@ export default function PopularMusicChart({
         </div>
         {media === "tj" && (
           <>
-            <div className="update-date">업데이트 날짜 : {tj.crawledDate}</div>
+            <div className="update-date">
+              업데이트 날짜 : {TJ_Chart.crawledDate}
+            </div>
             <RankTable data={tj.musicList} />
           </>
         )}
         {media === "ky" && (
           <>
-            <div className="update-date">업데이트 날짜 : {ky.crawledDate}</div>
+            <div className="update-date">
+              업데이트 날짜 : {KY_Chart.crawledDate}
+            </div>
             <RankTable data={ky.musicList} />
           </>
         )}
