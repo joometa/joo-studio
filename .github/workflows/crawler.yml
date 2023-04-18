@@ -2,7 +2,7 @@ name: Crawling CI
 
 on:
   schedule:
-    - cron: "*/2 * * * *"
+    - cron: "* * * * *"
 
 jobs:
   build:

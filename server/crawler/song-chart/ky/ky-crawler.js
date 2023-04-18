@@ -36,10 +36,10 @@ class KyCrawler {
     };
   }
 
-  _extractData($) {
+  async _extractData($) {
     const result = [];
     const uls = $(".popular_chart_list");
-    uls.each((idx, li) => {
+    await uls.each((idx, li) => {
       if (idx === 0) return;
       const data = {};
 
@@ -59,6 +59,8 @@ class KyCrawler {
       data["singer"] = singer;
       result.push(data);
     });
+
+    console.log("extractedData", result.length);
 
     return result;
   }
