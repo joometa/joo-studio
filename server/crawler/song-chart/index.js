@@ -3,7 +3,7 @@ const fs = require("fs");
 const { crawlAndUpdateTj } = require("./tj/tj-updater");
 const { crawlAndUpdateKy } = require("./ky/ky-updater");
 
-export async function crawlerTrigger() {
+async function crawlerTrigger() {
   const outputPath = path.join(process.cwd(), "src/data/song-chart");
   if (!fs.existsSync(outputPath)) {
     fs.mkdirSync(outputPath);
@@ -20,3 +20,5 @@ export async function crawlerTrigger() {
   }
   return;
 }
+
+crawlerTrigger();
