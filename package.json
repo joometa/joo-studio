@@ -11,7 +11,7 @@
     "lint": "next lint",
     "postbuild": "next-sitemap",
     "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && echo jootudio.com > out/CNAME && echo naver-site-verification: naver29cd0d06b44998aed17984cefa3c4d66.html > out/naver29cd0d06b44998aed17984cefa3c4d66.html && git add -f out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages",
-    "crawler": "node server/crawler/song-chart/index.js && git add src/data/ && git commit -m \"cron : Update crawling data\" && git push origin main"
+    "crawler": "node server/crawler/song-chart/index.js"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.17",

@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       deployments: read
     strategy:
       matrix:
@@ -16,7 +16,7 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
         with:
           persist-credentials: false
       - name: Install Dependencies Using Node.js ${{ matrix.node-version }}
@@ -27,3 +27,17 @@ jobs:
 
       - name: Crawling & Update
         run: npm run crawler
+
+      - name: Create local changes
+        run: |
+          git add src/data/
+      - name: Commit files
+        run: |
+          git config --local user.email "jjlee1623@gmail.com"
+          git config --local user.name "JeongjooLee"
+          git commit -a -m "cron : Update crawling data"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.TOKEN }}
+          branch: main
