@@ -24,6 +24,7 @@ class KyCrawler {
 
     const data = [...this._extractData($_50), ...this._extractData($_100)];
 
+    console.log("크롤링 하긴하냐?????", data.length);
     return {
       musicList: [...data],
     };
