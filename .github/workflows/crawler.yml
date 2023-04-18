@@ -27,23 +27,3 @@ jobs:
 
       - name: Crawling & Update
         run: npm run crawler
-
-      - name: Build & Export
-        run: |
-          echo "remove rotots.txt & sitemap.xml"
-          rm -rf public/robots.txt public/sitemap*.xml
-      - run: npm run build
-      - run: |
-          echo "export : make /out directory"    
-          npm run export
-        env:
-          CI: true
-          DEPLOY_TARGET: gh-pages
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.7.1
-        with:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: out
-          CLEAN: true
