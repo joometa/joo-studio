@@ -28,8 +28,8 @@ async function crawlAndUpdateKy(outputPath) {
 
   //TODO : remove
   console.log("똑같아?", _.isEqual(newData, prevData));
-  console.log("newData", newData);
-  console.log("musicList", musicList);
+  console.log("newData", newData.musicList.length);
+  console.log("musicList", musicList.length);
 
   // 변경된 값 없을 경우
   if (_.isEqual(newData, prevData)) {
