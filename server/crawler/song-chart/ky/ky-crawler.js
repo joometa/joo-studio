@@ -15,18 +15,21 @@ class KyCrawler {
   }
 
   async crawlStat() {
+    const data = [];
     const url_1_to_50 = "https://kysing.kr/popular/?period=m&range=1";
     const url_51_to_100 = "https://kysing.kr/popular/?period=m&range=2";
+
     const resp_50 = await this.client.get(url_1_to_50);
-    const resp_100 = await this.client.get(url_51_to_100);
     const $_50 = cheerio.load(resp_50.data);
-    const $_100 = cheerio.load(resp_100.data);
-
     const c_50 = this._extractData($_50);
-    const c_100 = this._extractData($_100);
-    const data = [...c_50, ...c_100];
+    c_50.forEach((d) => data.push(d));
 
-    console.log("크롤링?????", c_50.length, c_100.length);
+    const resp_100 = await this.client.get(url_51_to_100);
+    const $_100 = cheerio.load(resp_100.data);
+    const c_100 = this._extractData($_100);
+    c_100.forEach((d) => data.push(d));
+
+    console.log("크롤링?!!!!????", c_50.length, c_100.length);
     console.log("크롤링 하긴하냐?????", data.length);
     return {
       musicList: [...data],
