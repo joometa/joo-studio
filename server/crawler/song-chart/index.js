@@ -12,11 +12,21 @@ async function crawlerTrigger() {
   try {
     console.log("TJ 미디어 : 크롤링 데이터 업데이트 시작합니다.");
     await crawlAndUpdateTj(outputPath);
+  } catch (e) {
+    console.error(
+      "TJ 미디어 크롤링데이터 업데이트에 실패했습니다. \nFailed :",
+      e
+    );
+  }
 
+  try {
     console.log("KY 미디어 : 크롤링 데이터 업데이트 시작합니다.");
     await crawlAndUpdateKy(outputPath);
   } catch (e) {
-    console.error("크롤링데이터 업데이트에 실패했습니다. \nFailed :", e);
+    console.error(
+      "KY 미디어 크롤링데이터 업데이트에 실패했습니다. \nFailed :",
+      e
+    );
   }
   return;
 }
