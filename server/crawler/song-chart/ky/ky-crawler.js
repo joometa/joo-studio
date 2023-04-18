@@ -55,7 +55,4 @@ class KyCrawler {
   }
 }
 
-const t = new KyCrawler();
-t.crawlStat();
-
 module.exports = KyCrawler;
