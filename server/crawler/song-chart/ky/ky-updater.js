@@ -5,7 +5,7 @@ const { format, utcToZonedTime } = require("date-fns-tz");
 const KyCrawler = require("./ky-crawler");
 
 async function crawlAndUpdateKy(outputPath) {
-  let prevData = [];
+  let prevData;
   const kyJsonPath = path.join(outputPath, "ky-chart.json");
 
   try {
@@ -25,6 +25,11 @@ async function crawlAndUpdateKy(outputPath) {
     crawledDate,
     musicList,
   };
+
+  //TODO : remove
+  console.log("똑같아?", _.isEqual(newData, prevData));
+  console.log("newData", newData);
+  console.log("musicList", musicList);
 
   // 변경된 값 없을 경우
   if (_.isEqual(newData, prevData)) {

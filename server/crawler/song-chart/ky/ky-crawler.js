@@ -22,8 +22,10 @@ class KyCrawler {
     const $_50 = cheerio.load(resp_50.data);
     const $_100 = cheerio.load(resp_100.data);
 
+    const data = [...this._extractData($_50), ...this._extractData($_100)];
+
     return {
-      musicList: [...this._extractData($_50), ...this._extractData($_100)],
+      musicList: [...data],
     };
   }
 
