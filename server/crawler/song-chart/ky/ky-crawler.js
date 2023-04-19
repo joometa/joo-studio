@@ -29,6 +29,7 @@ class KyCrawler {
     const c_100 = this._extractData($_100);
     c_100.forEach((d) => data.push(d));
 
+    console.log("fetching은하냐??", resp_50, $_50);
     console.log("크롤링?!!!!????", c_50.length, c_100.length);
     console.log("크롤링 하긴하냐?????", data.length);
     return {
@@ -39,6 +40,7 @@ class KyCrawler {
   _extractData($) {
     const result = [];
     const uls = $(".popular_chart_list");
+    console.log("ULS", uls);
     uls.each((idx, li) => {
       if (idx === 0) return;
       const data = {};
@@ -52,12 +54,14 @@ class KyCrawler {
       const songInfoArr = $(li).find(".tit").contents().toArray();
       const songTitle = $(songInfoArr[0]).text();
       const singer = $(songInfoArr[1]).text();
+      console.log("songNumber", songNumber);
 
       data["rank"] = Number(rank);
       data["songNumber"] = Number(songNumber);
       data["songTitle"] = songTitle;
       data["singer"] = singer;
       result.push(data);
+      console.log("data", data);
     });
 
     return result;
