@@ -18,6 +18,7 @@ class TjCrawler {
     const url = "https://www.tjmedia.com/tjsong/song_monthPopular.asp";
     const resp = await this.client.get(url);
     const $ = cheerio.load(resp.data);
+    console.log("TJ크롤링은?", this._extractData($).length);
 
     return { musicList: this._extractData($) };
   }
