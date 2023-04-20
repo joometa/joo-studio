@@ -10,8 +10,6 @@ import { RankTable, Meta } from "@components/popularMusicChart";
 import Head from "next/head";
 
 export const getStaticProps = async () => {
-  // await crawlerTrigger();
-
   const minute = 60;
   const hour = minute * 60;
   const day = hour * 24;
@@ -21,7 +19,7 @@ export const getStaticProps = async () => {
       tj: TJ_Chart,
       ky: KY_Chart,
     },
-    revalidate: minute,
+    revalidate: 3 * day,
   };
 };
 
@@ -50,26 +48,24 @@ export default function PopularMusicChart({
               defaultValue="tj"
             >
               <option value="tj">TJ 미디어</option>
-              <option value="ky">KY 금영</option>
+              {/* <option value="ky">KY 금영</option> */}
             </Select>
           </div>
         </div>
         {media === "tj" && (
           <>
-            <div className="update-date">
-              업데이트 날짜 : {TJ_Chart.crawledDate}
-            </div>
+            <div className="update-date">업데이트 날짜 : {tj.crawledDate}</div>
             <RankTable data={tj.musicList} />
           </>
         )}
-        {media === "ky" && (
+        {/* {media === "ky" && (
           <>
             <div className="update-date">
               업데이트 날짜 : {KY_Chart.crawledDate}
             </div>
             <RankTable data={ky.musicList} />
           </>
-        )}
+        )} */}
       </Container>
     </>
   );
