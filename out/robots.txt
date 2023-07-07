@@ -1,0 +1,14 @@
+# *
+User-agent: *
+Allow: /
+
+# Yeti
+User-agent: Yeti
+Allow: /
+
+# Host
+Host: https://jootudio.com
+
+# Sitemaps
+Sitemap: https://jootudio.com/sitemap.xml
+Sitemap: https://jootudio.com/server-sitemap.xml
